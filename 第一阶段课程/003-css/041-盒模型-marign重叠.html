@@ -4,7 +4,23 @@
 	<meta charset="UTF-8">
 	<title>041-盒模型-marign重叠.html</title>
 	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+		}
 		.box1{
+			background: red;
+			margin-bottom: 100px;
+			display: inline-block;	
+			/*overflow: hidden;*/
+
+		}
+		.box2{
+			background: blue;
+			margin-top: 150px;
+		}
+		/*.box1{
 			width: 100px;
 			height: 100px;
 			background: red;
@@ -18,7 +34,7 @@
 		}
 		.father{
 			overflow: hidden;
-		}
+		}*/
 	</style>
 </head>
 <body>
