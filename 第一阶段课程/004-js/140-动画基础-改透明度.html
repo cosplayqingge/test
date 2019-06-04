@@ -37,6 +37,7 @@
 		timer = setInterval(function(){
 			var current = parseFloat(getComputedStyle(oBox,false)['opacity']);
 			current = Math.round(current * 100);
+			//Math.round当前值四舍五入
 			console.log(current);
 			if(current > 50){
 				iSpeed = -3;
