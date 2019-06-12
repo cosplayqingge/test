@@ -21,10 +21,10 @@ var server = http.createServer(function(req,res){
 	
 	console.log("cookie::",req.headers.cookie);
 	
-	//var oDate = new Date('2019-03-07 18:53:00').toUTCString();
-	//res.setHeader('Set-Cookie',["username=tom;expires="+oDate]);
+	// var oDate = new Date('2019-03-07 18:53:00').toUTCString();
+	// res.setHeader('Set-Cookie',["username=tom;expires="+oDate]);
 	
-	//res.setHeader('Set-Cookie',["username=tom;max-age=10"]);
+	res.setHeader('Set-Cookie',["username=tom;max-age=10"]);
 
 	if(urlStr == '/favicon.ico'){
 		res.end('favicon.ico');

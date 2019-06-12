@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.content{
+			height: 300px;
+			width: 300px;
+			border: 1px solid black;
+			margin-top: 10%;
+			margin-left: 34%;
+		}
+		.content>a{
+			text-decoration: none;
+		}
+		.small{
+			height: 200px;
+			width: 200px;
+		}
+		#ctr1+a{
+			color: red;
+		}
+		#ctr2+a{
+			color: green;
+		}
+		#ctr3+a{
+			color: blue;
+		}
+		#ctr1:checked~.small{
+			background-color: red;
+		}
+		#ctr2:checked~.small{
+			background-color: green;
+		}
+		#ctr3:checked~.small{
+			background-color: blue;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="content">
+		<input type="radio" name="set" id="ctr1" checked="checked">
+		<a href="#">红色</a>
+		<input type="radio" name="set" id="ctr2">
+		<a href="#">绿色</a>
+		<input type="radio" name="set" id="ctr3">
+		<a href="#">蓝色</a>
+		<div class="small">
+			
+		</div>
+	</div>
+
+</body>
+</html>
