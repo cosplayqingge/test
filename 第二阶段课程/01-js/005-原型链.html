@@ -9,7 +9,7 @@
 			this.age = age;
 		}
 		Person.prototype.showName = function(){
-			console.log('I am '+this.name);
+			console.log('I am '+this.name  + ' lalal ');
 		}
 		Person.prototype.showAge = function(){
 			console.log('I am '+this.age + ' years old');
@@ -17,16 +17,18 @@
 		var p1 = new Person('Tom',18);
 		var p2 = new Person('Leo',88);
 
-		//console.log(p1.__proto__ === Person.prototype);
-		//console.log(p1.__proto__ === p2.__proto__);
+		//console.log(p1.__proto__ === Person.prototype);//true
+		//console.log(p1.__proto__ === p2.__proto__);//true
 		p1.showName = function(){
 			console.log('I am '+this.name+" !!!!");
 		}
 		console.log(p1);
 		p1.showName();
 		p1.showAge();
+
 		// p1.test();
 		console.log(p1.toString());
+		p2.showName();
 
 	</script>
 </head>

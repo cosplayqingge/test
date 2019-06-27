@@ -51,7 +51,7 @@
 		<li>3</li>
 		<li>4</li>
 	</ul>
-	<ul id="tab-list2" class="tab-list">
+	<!-- <ul id="tab-list2" class="tab-list">
 		<li class="active">热门</li>
 		<li>电视</li>
 		<li>电脑</li>
@@ -62,7 +62,7 @@
 		<li>2</li>
 		<li>3</li>
 		<li>4</li>
-	</ul>	
+	</ul>	 -->
 </body>
 <script>
 	/*
@@ -99,18 +99,18 @@
 		}
 	}
 
-	Tab.prototype.fnClick = function(oBtn){
+	Tab.prototype.fnClick = function(aBtn){
 		console.log(this);
 		for(var i = 0;i<this.aBtn.length;i++){
 			this.aBtn[i].className = '';
 			this.aContent[i].style.display = 'none';
 		}
-		oBtn.className = 'active';
-		this.aContent[oBtn.index].style.display  = 'block';
+		aBtn.className = 'active';
+		this.aContent[aBtn.index].style.display  = 'block';
 	}
 
 	new Tab('#tab-list li','#tab-container li');
-	new Tab('#tab-list2 li','#tab-container2 li');
+	//new Tab('#tab-list2 li','#tab-container2 li');
 
 
 </script>
