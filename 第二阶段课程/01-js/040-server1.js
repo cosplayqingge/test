@@ -15,7 +15,7 @@ var port = 3000;
 var server = http.createServer(function(req, res){
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello Kuazhu\n');
+  res.end('Hello Kuazhu');
 });
 
 server.listen(port, hostname, function(){

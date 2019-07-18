@@ -11,17 +11,17 @@
 		Person.prototype.showName = function(){
 			console.log('I am '+this.name);
 		}
-		/*
+		
 		Person.prototype.showAge = function(){
 			console.log('I am '+this.age + ' years old');
 		}
-		*/
-		Object.defineProperty(Person.prototype,'showAge',{
-			value:function(){
-				console.log('I am '+this.age + ' years old');
-			},
-			enumerable:true
-		})
+		
+		// Object.defineProperty(Person.prototype,'showAge',{
+		// 	value:function(){
+		// 		console.log('I am '+this.age + ' years old');
+		// 	},
+		// 	enumerable:true
+		// })
 		Person.prototype.LEGS = 2;	
 
 		function Student(name,age,major){
