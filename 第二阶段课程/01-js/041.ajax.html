@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>041.ajax.html</title>
+</head>
+<body>
+	<button id="btn">获取数据</button>
+</body>
+<script>
+	var oBtn = document.getElementById('btn');
+	oBtn.onclick=function(){
+		//第一步生成ajax对象(购买电话)
+		var oAjax = new XMLHttpRequest();
+		// console.log(oAjax) aja方x上面有open方法
+		// 第二步建立链接(拨号)
+		oAjax.open('GET','http://127.0.0.1:3000/042-data.json',true)//oAjax.open(请求方法，请求地址，是否异步) 
+		//第三步 发送信息(说话)
+		oAjax.send();
+		//第四步  监听事件(接收时间)
+		oAjax.onreadystatechange = function(){
+			if(oAjax.readyState == 4){
+				if(oAjax.status == 200){
+					try{
+						var obj = JSON.parse(oAjax.responseText);
+						console.log(obj.name);
+					}catch(e){
+						console.log(e);
+					}
+				}else{
+					console.log(oAjax.status)
+				}
+			}
+		}
+	}
+</script>
+</html>

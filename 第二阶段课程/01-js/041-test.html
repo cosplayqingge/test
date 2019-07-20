@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>041-test.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function aa(id){
+		this.id = id
+		setTimeout(function(){
+			console.log(this,this.id)
+		},100)
+	}
+	var id = 33
+	new aa(55)
+</script>
+</html>
