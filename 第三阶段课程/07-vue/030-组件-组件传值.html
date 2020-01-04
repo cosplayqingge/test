@@ -7,52 +7,63 @@
 <body>
 	<div id="app">
 		<ul>
-			<li>吃饭</li>
-			<!--
-			<todo-item task="睡觉"></todo-item>
-			<todo-item task="打豆豆" ></todo-item>
-			-->
-			<todo-item 
+			<li>吃饭 1</li>
+			<tmpl v-bind:qingge="msg">{{msg}}</tmpl>
+			<!-- <todo-item 
 				v-for="(item,index) in items"
 				:task="item.task"
 				:id="item.id"
 				:key="item.id"
-			>
-				
+			> 
 			</todo-item>
+			-->
 		</ul>
 	</div>
+	<template id="tmpl">
+		<div>
+			天下第一 --{{ qingge }}
+		</div>
+	</template>
 </body>
 <script src="js/vue.js"></script>
 <script>
-	Vue.component('todo-item',{
-		/*
-		data(){
-			return {
-				task:'睡觉'	
-			}
-		},
-		*/
-		// props:['task'],
-		props:{
-			task:String,
-			id:Number
-		},
-		template:'<li>{{id}}-{{task}}</li>'
-	});		
+	// Vue.component('todo-item',{
+	// 	/*
+	// 	data(){
+	// 		return {
+	// 			task:'睡觉'	
+	// 		}
+	// 	},
+	// 	*/
+	// 	// props:['task'],
+	// 	props:{
+	// 		task:String,
+	// 		id:Number
+	// 	},
+	// 	template:'<li>{{id}}-{{task}}</li>'
+	// });		
+	Vue.component('tmpl',{
+	    template:"#tmpl",
+		props:["qingge"]
+	})
 	let vm1 = new Vue({
 		el:'#app',
 		data:{
-			items:[
-				{
-					id:99,
-					task:'睡觉'
-				},
-				{
-					id:2,
-					task:'打豆豆'
-				}
-			]
+			msg:"lalal",
+			// items:[
+			// 	{
+			// 		id:99,
+			// 		task:'睡觉'
+			// 	},
+			// 	{
+			// 		id:100,
+			// 		task:'玩游戏'
+			// 	},
+			// 	{
+			// 		id:2,
+			// 		task:'打豆豆'
+			// 	}
+			// ]
 		},
 	});	
 </script>
